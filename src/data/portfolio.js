@@ -20,10 +20,10 @@ export const personal = {
 };
 
 export const socialLinks = {
-  github: "#GITHUB",
+  github: "https://github.com/Alexis0-0",
   linkedin: "#LINKEDIN",
   facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
-  email: `mailto:${personal.email}`,
+  email: `mailto:${johnalexisdelacruz.it@gmail.com}`,
 };
 
 export const quickFacts = [
