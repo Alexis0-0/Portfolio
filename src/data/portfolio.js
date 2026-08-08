@@ -5,7 +5,7 @@
 
 export const personal = {
   name: "John Alexis Dela Cruz",
-  initials: "ALEXIS",
+  initials: "JAD",
   role: "IT Support Professional",
   tagline: "Technical Support • Hardware • Networking",
   location: "Tarlac, Philippines",
@@ -16,14 +16,14 @@ export const personal = {
     "Seeking an entry-level IT Support, Technical Support, Help Desk, or related IT position where I can apply my technical knowledge, troubleshooting skills, and passion for helping users solve technology-related problems.",
   resumePath: "/resume.pdf",
   profileImage: "/images/profile.jpg",
-  email: "johnalexisdelacruz.it@gmail.com",
+  email: "your.email@example.com",
 };
 
 export const socialLinks = {
   github: "#GITHUB",
   linkedin: "#LINKEDIN",
   facebook: "#FACEBOOK",
-  email: `mailto:${itgmail.com}`,
+  email: `mailto:${personal.email}`,
 };
 
 export const quickFacts = [
