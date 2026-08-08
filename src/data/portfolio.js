@@ -188,6 +188,13 @@ export const certifications = [
     date: "March 14, 2025",
     credentialUrl: `${import.meta.env.BASE_URL}certificates/ansc-299-webinar-session-2.pdf`,
   },
+  {
+    id: "cert-asean-festival-2024",
+    title: "ASEAN Festival 2024 Culminating Activity",
+    issuer: "Office of External Linkages and International Affairs, Tarlac Agricultural University (TAU)",
+    date: "August 29, 2024",
+    credentialUrl: `${import.meta.env.BASE_URL}certificates/certificate_of_attendance_asean_festival_2024.pdf`,
+  },
 ];
 
 export const navItems = [
