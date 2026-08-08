@@ -16,13 +16,13 @@ export const personal = {
     "Seeking an entry-level IT Support, Technical Support, Help Desk, or related IT position where I can apply my technical knowledge, troubleshooting skills, and passion for helping users solve technology-related problems.",
   resumePath: `${import.meta.env.BASE_URL}resume.pdf`,
   profileImage: `${import.meta.env.BASE_URL}images/profile.jpg`,
-  email: "your.email@example.com",
+  email: "johnalexis.it@gmail.com",
 };
 
 export const socialLinks = {
-  github: "#GITHUB",
-  linkedin: "#LINKEDIN",
-  facebook: "#FACEBOOK",
+  github: "https://github.com/Alexis0-0/",
+  linkedin: "https://www.linkedin.com/in/john-alexis-soberano-dela-cruz-0995a2428",
+  facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
   email: `mailto:${personal.email}`,
 };
 

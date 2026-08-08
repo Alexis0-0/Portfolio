@@ -11,11 +11,38 @@ const STATUS = {
   ERROR: "error",
 };
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+function validateField(name, value) {
+  const trimmed = value.trim();
+  switch (name) {
+    case "name":
+      if (!trimmed) return "Please enter your name.";
+      if (trimmed.length < 2) return "Name must be at least 2 characters.";
+      return "";
+    case "email":
+      if (!trimmed) return "Please enter your email address.";
+      if (!EMAIL_PATTERN.test(trimmed)) return "Enter a valid email address, e.g. name@gmail.com.";
+      return "";
+    case "subject":
+      if (!trimmed) return "Please enter a subject.";
+      return "";
+    case "message":
+      if (!trimmed) return "Please enter a message.";
+      if (trimmed.length < 10) return "Message should be at least 10 characters.";
+      return "";
+    default:
+      return "";
+  }
+}
+
 export default function Contact() {
   const ref = useRef(null);
   useReveal(ref);
 
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
   const [status, setStatus] = useState(STATUS.IDLE);
 
   const hasFormspree = Boolean(contactConfig.formspreeEndpoint);
@@ -29,11 +56,36 @@ export default function Contact() {
   )}`;
 
   const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    if (touched[name]) {
+      setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const nextErrors = {
+      name: validateField("name", form.name),
+      email: validateField("email", form.email),
+      subject: validateField("subject", form.subject),
+      message: validateField("message", form.message),
+    };
+    setErrors(nextErrors);
+    setTouched({ name: true, email: true, subject: true, message: true });
+
+    const hasErrors = Object.values(nextErrors).some(Boolean);
+    if (hasErrors) {
+      setStatus(STATUS.IDLE);
+      return;
+    }
 
     if (!hasBackend) {
       // No service configured: fall back to opening the user's mail client.
@@ -61,6 +113,8 @@ export default function Contact() {
       if (!response.ok) throw new Error("Request failed");
       setStatus(STATUS.SUCCESS);
       setForm({ name: "", email: "", subject: "", message: "" });
+      setErrors({});
+      setTouched({});
     } catch {
       setStatus(STATUS.ERROR);
     }
@@ -103,22 +157,85 @@ export default function Contact() {
           <form className="contact__form card reveal" data-reveal-delay="120" onSubmit={handleSubmit} noValidate>
             <div className="contact__field">
               <label htmlFor="name">Name</label>
-              <input id="name" name="name" type="text" required minLength={2} value={form.name} onChange={handleChange} autoComplete="name" />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                value={form.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                autoComplete="name"
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? "name-error" : undefined}
+                className={errors.name ? "has-error" : ""}
+              />
+              {errors.name && (
+                <p id="name-error" className="contact__field-error" role="alert">
+                  <AlertCircle size={13} /> {errors.name}
+                </p>
+              )}
             </div>
 
             <div className="contact__field">
               <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} autoComplete="email" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={form.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                autoComplete="email"
+                placeholder="name@gmail.com"
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={errors.email ? "email-error" : undefined}
+                className={errors.email ? "has-error" : ""}
+              />
+              {errors.email && (
+                <p id="email-error" className="contact__field-error" role="alert">
+                  <AlertCircle size={13} /> {errors.email}
+                </p>
+              )}
             </div>
 
             <div className="contact__field">
               <label htmlFor="subject">Subject</label>
-              <input id="subject" name="subject" type="text" required value={form.subject} onChange={handleChange} />
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                value={form.subject}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                aria-invalid={Boolean(errors.subject)}
+                aria-describedby={errors.subject ? "subject-error" : undefined}
+                className={errors.subject ? "has-error" : ""}
+              />
+              {errors.subject && (
+                <p id="subject-error" className="contact__field-error" role="alert">
+                  <AlertCircle size={13} /> {errors.subject}
+                </p>
+              )}
             </div>
 
             <div className="contact__field">
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows={5} required minLength={10} value={form.message} onChange={handleChange} />
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                value={form.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                aria-invalid={Boolean(errors.message)}
+                aria-describedby={errors.message ? "message-error" : undefined}
+                className={errors.message ? "has-error" : ""}
+              />
+              {errors.message && (
+                <p id="message-error" className="contact__field-error" role="alert">
+                  <AlertCircle size={13} /> {errors.message}
+                </p>
+              )}
             </div>
 
             <button type="submit" className="btn btn-primary contact__submit" disabled={status === STATUS.SENDING}>

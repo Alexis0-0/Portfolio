@@ -86,6 +86,26 @@
   outline: none;
 }
 
+.contact__field input.has-error,
+.contact__field textarea.has-error {
+  border-color: #f87171;
+}
+
+.contact__field input.has-error:focus,
+.contact__field textarea.has-error:focus {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.14);
+}
+
+.contact__field-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #f87171;
+  margin-top: -2px;
+}
+
 .contact__submit {
   margin-top: 6px;
   width: 100%;
