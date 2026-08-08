@@ -61,19 +61,23 @@ export default function Projects() {
                   <h3 className="project-card__title">{project.title}</h3>
                   <p className="project-card__desc">{project.description}</p>
 
-                  <ul className="project-card__features">
-                    {project.features.slice(0, 6).map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
+                  {project.features?.length > 0 && (
+                    <ul className="project-card__features">
+                      {project.features.slice(0, 6).map((f) => (
+                        <li key={f}>{f}</li>
+                      ))}
+                    </ul>
+                  )}
 
-                  <div className="project-card__tags">
-                    {project.tags.map((tag) => (
-                      <span className="project-card__tag" key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {project.tags?.length > 0 && (
+                    <div className="project-card__tags">
+                      {project.tags.map((tag) => (
+                        <span className="project-card__tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
                   {(project.liveUrl || project.githubUrl) && (
                     <div className="project-card__actions">
