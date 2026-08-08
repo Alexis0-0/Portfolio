@@ -180,7 +180,15 @@ export const projects = [
 
 // Add certification objects here as they become available.
 // Example shape: { id, title, issuer, date, credentialUrl }
-export const certifications = [];
+export const certifications = [
+  {
+    id: "cert-ansc299",
+    title: "Technologies and Practices to Improve Feed and Nutrient Utilization by Pigs",
+    issuer: "ANSC 299 Graduate Webinar Series — Institute of Animal Science, UPLB",
+    date: "March 14, 2025",
+    credentialUrl: `${import.meta.env.BASE_URL}certificates/ansc-299-webinar-session-2.pdf`,
+  },
+];
 
 export const navItems = [
   { id: "home", label: "Home" },
