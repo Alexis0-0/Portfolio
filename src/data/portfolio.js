@@ -150,7 +150,7 @@ export const projectCategories = ["All", "Web Development", "IT Support", "Netwo
 export const projects = [
   {
     id: "proj-tau-ecommerce",
-    title: "TAU E-Commerce Web-Based Application",
+    title: "Design and Development of a TAU Ecommerce Web-Based Application for IGP (Capstone Project)",
     description:
       "A web-based e-commerce application designed to streamline the purchasing of university income-generated products.",
     features: [
@@ -170,7 +170,7 @@ export const projects = [
       "Access control",
       "Security considerations",
     ],
-    tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS", "Web Application"],
+    tags: ["PHP", "CSS", "JavaScript"],
     categories: ["Web Development", "Academic"],
     image: `${import.meta.env.BASE_URL}images/project-1.jpg`,
     liveUrl: "#PROJECT-LINK",
