@@ -23,7 +23,7 @@ export const socialLinks = {
   github: "https://github.com/Alexis0-0",
   linkedin: "#www.linkedin.com/in/john-alexis-soberano-dela-cruz-0995a2428",
   facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
-  email: `mailto:${johnalexisdelacruz.it@gmail.com}`,
+  email: `mailto:${johnalexisdelacruz.itgmail.com}`,
 };
 
 export const quickFacts = [
