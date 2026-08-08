@@ -8,12 +8,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <p className="footer__copy">
-          © {year} {personal.name}
-          <span className="footer__divider" aria-hidden="true">•</span>
-          Built with HTML • CSS • JavaScript
-        </p>
-        <p className="footer__credit">Designed &amp; Developed by {personal.name}</p>
+        <p className="footer__copy">© {year} {personal.name}</p>
 
         <a href="#home" className="footer__top">
           Back to Top <ArrowUp size={14} />

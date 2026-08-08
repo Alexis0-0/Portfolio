@@ -24,16 +24,6 @@
   color: var(--muted);
 }
 
-.footer__divider {
-  margin-inline: 8px;
-  color: var(--muted-dim);
-}
-
-.footer__credit {
-  font-size: 0.8rem;
-  color: var(--muted-dim);
-}
-
 .footer__top {
   display: inline-flex;
   align-items: center;

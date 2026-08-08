@@ -23,7 +23,9 @@ export const socialLinks = {
   github: "https://github.com/Alexis0-0/",
   linkedin: "https://www.linkedin.com/in/john-alexis-soberano-dela-cruz-0995a2428",
   facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
-  email: `mailto:${personal.email}`,
+  // Opens Gmail's web compose window with the recipient pre-filled, rather
+  // than relying on a system mailto: handler (which may not be configured).
+  email: `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`,
 };
 
 export const quickFacts = [

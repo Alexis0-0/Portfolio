@@ -35,6 +35,20 @@
   transform: translateY(-3px);
 }
 
+.contact__email-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.contact__email-line:hover {
+  color: var(--accent);
+}
+
 .contact__notice {
   margin-top: 28px;
   font-size: 0.82rem;

@@ -141,10 +141,14 @@ export default function Contact() {
               <a href={socialLinks.facebook} className="contact__social" aria-label="Facebook profile" target="_blank" rel="noreferrer">
                 <MessageCircle size={18} />
               </a>
-              <a href={socialLinks.email} className="contact__social" aria-label="Send email">
+              <a href={socialLinks.email} className="contact__social" aria-label="Compose an email" target="_blank" rel="noreferrer">
                 <Mail size={18} />
               </a>
             </div>
+
+            <a href={socialLinks.email} className="contact__email-line" target="_blank" rel="noreferrer">
+              <Mail size={14} /> {personal.email}
+            </a>
 
             {!hasBackend && (
               <p className="contact__notice">
