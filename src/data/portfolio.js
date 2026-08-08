@@ -14,8 +14,8 @@ export const personal = {
     "A Bachelor of Science in Information Technology graduate passionate about IT support, computer systems, hardware troubleshooting, networking, and helping users solve technical problems efficiently.",
   careerGoal:
     "Seeking an entry-level IT Support, Technical Support, Help Desk, or related IT position where I can apply my technical knowledge, troubleshooting skills, and passion for helping users solve technology-related problems.",
-  resumePath: "/resume.pdf",
-  profileImage: "/images/profile.jpg",
+  resumePath: `${import.meta.env.BASE_URL}resume.pdf`,
+  profileImage: `${import.meta.env.BASE_URL}images/profile.jpg`,
   email: "your.email@example.com",
 };
 
@@ -169,7 +169,7 @@ export const projects = [
     ],
     tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS", "Web Application"],
     categories: ["Web Development", "Academic"],
-    image: "/images/project-1.jpg",
+    image: `${import.meta.env.BASE_URL}images/project-1.jpg`,
     liveUrl: "#PROJECT-LINK",
     githubUrl: "#GITHUB-LINK",
     featured: true,
