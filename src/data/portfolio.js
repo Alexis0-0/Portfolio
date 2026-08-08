@@ -16,7 +16,7 @@ export const personal = {
     "Seeking an entry-level IT Support, Technical Support, Help Desk, or related IT position where I can apply my technical knowledge, troubleshooting skills, and passion for helping users solve technology-related problems.",
   resumePath: "/resume.pdf",
   profileImage: "/images/profile.jpg",
-  email: "your.email@example.com",
+  email: "johnalexisdelacruz.it@gmail.com",
 };
 
 export const socialLinks = {
