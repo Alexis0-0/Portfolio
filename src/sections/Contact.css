@@ -1,0 +1,122 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 64px;
+  }
+}
+
+.contact__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.contact__social {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: all var(--dur-fast) var(--ease);
+}
+
+.contact__social:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.contact__notice {
+  margin-top: 28px;
+  font-size: 0.82rem;
+  color: var(--muted-dim);
+  border: 1px dashed var(--border-strong);
+  border-radius: 8px;
+  padding: 12px 14px;
+  max-width: 44ch;
+}
+
+.contact__notice code {
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+.contact__form {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__field label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.contact__field input,
+.contact__field textarea {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  min-height: 44px;
+  transition: border-color var(--dur-fast) var(--ease);
+  resize: vertical;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.contact__submit {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.contact__spinner {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact__status {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.86rem;
+  margin-top: 4px;
+}
+
+.contact__status--success {
+  color: var(--success);
+}
+
+.contact__status--error {
+  color: #f87171;
+}
+
+.contact__status--error a {
+  text-decoration: underline;
+}

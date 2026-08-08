@@ -1,0 +1,90 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 24px;
+}
+
+.timeline__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline__marker-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.16);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.timeline__marker-line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--border));
+  margin-top: 6px;
+}
+
+.timeline__content {
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.timeline__content:hover {
+  border-color: var(--accent);
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.timeline__role {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.timeline__org {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+}
+
+.timeline__responsibilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .timeline__responsibilities {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.timeline__responsibilities li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.timeline__responsibilities li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 1.5px;
+  background: var(--accent-2);
+}

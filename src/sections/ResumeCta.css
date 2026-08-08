@@ -1,0 +1,38 @@
+.resume-cta__panel {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 860px) {
+  .resume-cta__panel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.resume-cta__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(var(--accent-rgb), 0.14), transparent 55%);
+  pointer-events: none;
+}
+
+.resume-cta__text {
+  max-width: 46ch;
+  position: relative;
+}
+
+.resume-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  position: relative;
+  flex-shrink: 0;
+}

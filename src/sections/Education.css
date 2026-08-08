@@ -1,0 +1,62 @@
+.education__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+.education__card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.14), transparent 70%);
+}
+
+.education__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.education__degree {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.education__school {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.education__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.education__status,
+.education__honor {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--muted);
+}
+
+.education__honor {
+  color: var(--accent);
+  border-color: var(--accent);
+}
