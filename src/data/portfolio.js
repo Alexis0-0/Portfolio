@@ -189,9 +189,11 @@ export const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
-// Contact form: set one endpoint via environment variables (see .env.example).
-// Falls back to a mailto: link automatically if none is configured.
+// Contact form: this Web3Forms access key is safe to keep in client-side code —
+// Web3Forms confirms it as a public key, similar to a Formspree form ID.
+// It can still be overridden via VITE_WEB3FORMS_ACCESS_KEY if needed (e.g. to
+// swap in a different form without editing this file).
 export const contactConfig = {
   formspreeEndpoint: import.meta.env.VITE_FORMSPREE_ENDPOINT || "",
-  web3formsAccessKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "",
+  web3formsAccessKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "f5edd564-7a3f-41a5-ae7a-f11852e86fad",
 };
