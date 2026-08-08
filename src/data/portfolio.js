@@ -173,8 +173,8 @@ export const projects = [
     tags: ["PHP", "CSS", "JavaScript"],
     categories: ["Web Development", "Academic"],
     image: `${import.meta.env.BASE_URL}images/project-1.jpg`,
-    liveUrl: "#PROJECT-LINK",
-    githubUrl: "#GITHUB-LINK",
+    liveUrl: null,
+    githubUrl: null,
     featured: true,
   },
 ];

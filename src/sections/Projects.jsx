@@ -75,14 +75,20 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="project-card__actions">
-                    <a href={project.liveUrl} className="btn btn-secondary" target="_blank" rel="noreferrer">
-                      <ExternalLink size={15} /> View Project
-                    </a>
-                    <a href={project.githubUrl} className="btn btn-ghost" target="_blank" rel="noreferrer">
-                      <Code2 size={15} /> View GitHub
-                    </a>
-                  </div>
+                  {(project.liveUrl || project.githubUrl) && (
+                    <div className="project-card__actions">
+                      {project.liveUrl && (
+                        <a href={project.liveUrl} className="btn btn-secondary" target="_blank" rel="noreferrer">
+                          <ExternalLink size={15} /> View Project
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a href={project.githubUrl} className="btn btn-ghost" target="_blank" rel="noreferrer">
+                          <Code2 size={15} /> View GitHub
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
