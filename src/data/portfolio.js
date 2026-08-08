@@ -5,7 +5,7 @@
 
 export const personal = {
   name: "John Alexis Dela Cruz",
-  initials: "JOHN ALEXIS",
+  initials: "ALEXIS",
   role: "IT Support Professional",
   tagline: "Technical Support • Hardware • Networking",
   location: "Tarlac, Philippines",
@@ -22,7 +22,7 @@ export const personal = {
 export const socialLinks = {
   github: "#GITHUB",
   linkedin: "#LINKEDIN",
-  facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
+  facebook: "#FACEBOOK",
   email: `mailto:${itgmail.com}`,
 };
 
