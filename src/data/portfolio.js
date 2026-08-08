@@ -6,8 +6,9 @@
 export const personal = {
   name: "John Alexis Dela Cruz",
   initials: "JAD",
-  role: "IT Support Professional",
-  tagline: "Technical Support • Hardware • Networking",
+  navLabel: "JOHN ALEXIS",
+  role: "IT Support | Web Developer",
+  tagline: "Cum Laude • Dean's Lister • Honor Graduate Eligible",
   location: "Tarlac, Philippines",
   status: "Available for Opportunities",
   intro:

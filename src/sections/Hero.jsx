@@ -18,7 +18,22 @@ export default function Hero() {
           </span>
 
           <p className="hero__greeting">Hi, I'm</p>
-          <h1 className="hero__name">{personal.name}</h1>
+          <h1 className="hero__name">
+            {(() => {
+              const words = personal.name.trim().split(" ");
+              const firstLine = words.slice(0, 2).join(" ");
+              const secondLine = words.slice(2).join(" ");
+              return secondLine ? (
+                <>
+                  {firstLine}
+                  <br />
+                  {secondLine}
+                </>
+              ) : (
+                personal.name
+              );
+            })()}
+          </h1>
 
           <p className="hero__role">
             {personal.role}

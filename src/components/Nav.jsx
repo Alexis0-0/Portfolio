@@ -37,7 +37,7 @@ export default function Nav({ theme, onToggleTheme }) {
     <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="container nav__inner">
         <a href="#home" className="nav__logo" aria-label={`${personal.name} — Home`}>
-          {personal.initials}
+          {personal.navLabel}
         </a>
 
         <nav className="nav__links" aria-label="Primary">
