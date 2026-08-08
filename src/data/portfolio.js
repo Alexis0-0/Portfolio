@@ -22,7 +22,7 @@ export const personal = {
 export const socialLinks = {
   github: "#GITHUB",
   linkedin: "#LINKEDIN",
-  facebook: "#FACEBOOK",
+  facebook: "https://www.facebook.com/JohnAlexisSoberanoDelaCruz/",
   email: `mailto:${personal.email}`,
 };
 
