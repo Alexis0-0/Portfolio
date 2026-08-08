@@ -5,7 +5,7 @@
 
 export const personal = {
   name: "John Alexis Dela Cruz",
-  initials: "JAD",
+  initials: "JOHN ALEXIS",
   role: "IT Support Professional",
   tagline: "Technical Support • Hardware • Networking",
   location: "Tarlac, Philippines",
