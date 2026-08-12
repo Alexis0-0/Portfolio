@@ -145,7 +145,7 @@ export const services = [
   },
 ];
 
-export const projectCategories = ["All", "Web Development", "IT Support", "Networking", "Academic", "Other"];
+export const projectCategories = ["All", "Web Development", "IT Support", "Networking", "Academic"];
 
 export const projects = [
   {
