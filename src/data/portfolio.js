@@ -67,7 +67,7 @@ export const education = {
   school: "Tarlac Agricultural University",
   statusLabel: "Graduate",
   // Set to a string (e.g. "Cum Laude") only if confirmed. Leave null otherwise.
-  honor: null,
+  honor: "Cum Laude",
 };
 
 export const skillCategories = [
