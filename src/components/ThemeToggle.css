@@ -1,37 +1,40 @@
 .theme-toggle {
-  width: 52px;
+  width: 54px;
   height: 30px;
-  border-radius: 999px;
-  padding: 3px;
+  border-radius: 9999px;
   flex-shrink: 0;
 }
 
 .theme-toggle__track {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
-  border-radius: 999px;
+  padding: 3px;
+  border-radius: 9999px;
   border: 1px solid var(--border-strong);
   background: var(--card);
-  transition: background var(--dur-med) var(--ease), border-color var(--dur-med) var(--ease);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: background var(--dur-med) var(--ease), border-color var(--dur-med) var(--ease),
+    box-shadow var(--dur-med) var(--ease);
 }
 
 .theme-toggle__thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: var(--text);
-  color: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--dur-med) var(--ease), background var(--dur-med) var(--ease);
+  flex-shrink: 0;
+  transition: transform var(--dur-med) var(--ease), background var(--dur-med) var(--ease),
+    color var(--dur-med) var(--ease);
 }
 
+/* Track content area is 54 - (3px padding * 2) = 48px.
+   Thumb is 24px, so the remaining travel distance is exactly 24px —
+   giving identical 3px clearance on both ends in either state. */
 .theme-toggle__track.is-dark .theme-toggle__thumb {
   transform: translateX(0);
   background: var(--accent);
@@ -39,11 +42,12 @@
 }
 
 .theme-toggle__track.is-light .theme-toggle__thumb {
-  transform: translateX(22px);
+  transform: translateX(24px);
   background: #f5b942;
   color: #1a1a1a;
 }
 
 .theme-toggle:hover .theme-toggle__track {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
 }

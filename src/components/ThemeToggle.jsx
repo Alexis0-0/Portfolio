@@ -14,7 +14,7 @@ export default function ThemeToggle({ theme, onToggle }) {
     >
       <span className={`theme-toggle__track ${isDark ? "is-dark" : "is-light"}`}>
         <span className="theme-toggle__thumb">
-          {isDark ? <Moon size={13} strokeWidth={2.4} /> : <Sun size={13} strokeWidth={2.4} />}
+          {isDark ? <Moon size={15} strokeWidth={2} /> : <Sun size={15} strokeWidth={2} />}
         </span>
       </span>
     </button>
