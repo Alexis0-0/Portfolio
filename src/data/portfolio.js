@@ -22,7 +22,7 @@ export const personal = {
 
 export const socialLinks = {
   github: "https://github.com/Alexis0-0/",
-  linkedin: "https://www.linkedin.com/in/john-alexis-soberano-dela-cruz-0995a2428",
+  linkedin: "https://www.linkedin.com/in/john-alexis-91909b421?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   facebook: "https://www.facebook.com/profile.php?id=61592544442472",
   // Opens Gmail's web compose window with the recipient pre-filled, rather
   // than relying on a system mailto: handler (which may not be configured).
