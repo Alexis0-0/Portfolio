@@ -8,7 +8,7 @@ export const personal = {
   initials: "JAD",
   navLabel: "JOHN ALEXIS",
   role: "IT Support | Web Developer",
-  tagline: "Cum Laude • Dean's Lister • Honor Graduate Eligible",
+  tagline: "Cum Laude • Honor Graduate Eligible",
   location: "Tarlac, Philippines",
   status: "Available for Opportunities",
   intro:
