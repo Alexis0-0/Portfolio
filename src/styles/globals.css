@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 :root {
   /* ---- Core surfaces ---- */
@@ -24,16 +24,16 @@
   --success: #34d399;
 
   /* ---- Type ---- */
-  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-display: "Instrument Sans", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
 
   /* ---- Layout ---- */
   --max-width: 1200px;
   --nav-height: 76px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 
   /* ---- Motion ---- */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -237,9 +237,9 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 26px;
-  border-radius: 999px;
-  font-size: 0.95rem;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
   font-weight: 500;
   min-height: 44px;
   transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease),
@@ -257,8 +257,8 @@ h4 {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0 0 1px var(--accent), 0 8px 24px -8px rgba(var(--accent-rgb), 0.6);
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 22px -10px rgba(var(--accent-rgb), 0.55);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -270,7 +270,7 @@ h4 {
 .btn-secondary:hover {
   border-color: var(--accent);
   color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .btn-ghost {

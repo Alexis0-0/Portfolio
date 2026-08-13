@@ -104,6 +104,24 @@
   gap: 14px;
 }
 
+.hero__contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted-dim);
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+
+.hero__contact-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .hero__visual {
   position: relative;
   height: clamp(320px, 42vw, 520px);

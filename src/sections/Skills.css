@@ -45,22 +45,41 @@
 
 .skills__list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
 }
 
 .skills__pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 2px;
+  font-family: var(--font-mono);
   font-size: 0.82rem;
-  padding: 7px 13px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
   color: var(--muted);
-  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
-    background var(--dur-fast) var(--ease);
+  border-bottom: 1px solid var(--border);
+  transition: color var(--dur-fast) var(--ease), padding-left var(--dur-fast) var(--ease);
+}
+
+.skills__list li:last-child {
+  border-bottom: none;
+}
+
+.skills__pill::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  background: var(--accent-2);
+  transform: rotate(45deg);
+  opacity: 0.7;
+  transition: opacity var(--dur-fast) var(--ease);
 }
 
 .skills__pill:hover {
   color: var(--text);
-  border-color: var(--accent);
-  background: rgba(var(--accent-rgb), 0.08);
+  padding-left: 6px;
+}
+
+.skills__pill:hover::before {
+  opacity: 1;
 }

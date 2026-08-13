@@ -50,10 +50,11 @@ export default function Hero() {
             <a href={personal.resumePath} download className="btn btn-secondary">
               <Download size={16} /> Download Resume
             </a>
-            <a href="#contact" className="btn btn-ghost">
-              <Mail size={16} /> Contact Me
-            </a>
           </div>
+
+          <a href="#contact" className="hero__contact-link">
+            <Mail size={14} /> Or reach out directly
+          </a>
         </div>
 
         <div className="hero__visual">

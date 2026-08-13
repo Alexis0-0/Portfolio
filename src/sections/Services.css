@@ -18,24 +18,47 @@
 
 .services__card {
   padding: 26px 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-med) var(--ease);
 }
 
 .services__card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
+  border-color: var(--border-strong);
   background: var(--card-hover);
 }
 
+.services__card:hover::before {
+  transform: scaleX(1);
+}
+
 .services__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid var(--border-strong);
   color: var(--accent);
   margin-bottom: 18px;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+
+.services__card:hover .services__icon {
+  border-color: var(--accent);
 }
 
 .services__title {
